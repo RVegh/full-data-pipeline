@@ -1,0 +1,15 @@
+import requests
+
+APP_ID = 'da2a4ceb '
+
+APP_KEY = 'N5smqzk15zRWe87ZlAa1iA==vosMmIGaqE9phvkx'
+
+HEADERS = {
+    'X-Api-Key': APP_KEY
+}
+
+recipe = 'pizza'
+link = f'https://api.api-ninjas.com/v1/recipe?query={recipe}'
+
+response = requests.get(link, headers=HEADERS)
+print(response.text)
